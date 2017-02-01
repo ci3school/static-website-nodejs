@@ -25,7 +25,7 @@ router.get("/contact",function(req,res){
 app.use("/",router);
 
 app.use("*",function(req,res){
-  res.sendFile(path + "404.html");
+  res.render('404', { title: '404 - Not found' });
 });
 
 app.listen(3000,function(){
